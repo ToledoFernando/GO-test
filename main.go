@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/ToledoFernando/GO-test/extras"
-	"github.com/google/uuid"
+	"net/http"
 )
 
 func main() {
-	println(uuid.New().String())
-	var xd = extras.Extras()
-	fmt.Println(xd)
+	http.ListenAndServe(":3000", nil)
+	fmt.Println("Server on Port 3000")
+
 }
