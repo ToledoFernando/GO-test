@@ -1,5 +1,5 @@
-module github.com/ToledoFernando/GO-test
+module GO-test
 
 go 1.20
 
-require github.com/google/uuid v1.3.0 // indirect
+require github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8 // indirect
