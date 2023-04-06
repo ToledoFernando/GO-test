@@ -2,9 +2,12 @@ package main
 
 import (
 	"fmt"
+
 	// "log"
 	"net/http"
 	// "time"
+
+	"test/rutas"
 
 	"github.com/globalsign/mgo"
 )
@@ -18,14 +21,13 @@ func main() {
 	// 	Timeout:  time.Second * 10,
 	// 	Database: db,
 	// }
-
 	// s, err := mgo.DialWithInfo(dialInfo)
 	// if err != nil {
 	// 	log.Fatalln("create session error ", err)
 	// }
-
 	// globalS = s
 
+	http.Handle("/", rutas.Respuesta)
 	http.ListenAndServe(":3000", nil)
 	fmt.Println("Server on Port 3000")
 
